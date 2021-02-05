@@ -1,0 +1,16 @@
+{
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "description": "Proyecto final para coderhouse",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch src/index.scss public/main.css",
+    "build": "sass src/index.scss public/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abril Arancibia",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.32.6"
+  }
+}
