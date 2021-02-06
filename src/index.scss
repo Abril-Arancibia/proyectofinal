@@ -11,7 +11,7 @@ $hugeSize: 1.6rem;
 }
 
 body {
-  padding: 60px 40px;
+  padding: 0 40px 60px;
   font-size: $mainSize;
 }
 
@@ -27,6 +27,10 @@ a:hover {
 header {
   display: flex;
   margin-bottom: 200px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  padding: 20px 0;
 
   & > * {
     flex: 1;
@@ -41,6 +45,7 @@ header {
     li {
       margin: 0 10px;
       display: flex;
+      height: 40px;
 
       a {
         display: block;
@@ -64,7 +69,7 @@ header {
     justify-content: center;
 
     img {
-      width: 200px;
+      width: 400px;
       height: auto;
     }
   }
@@ -141,7 +146,7 @@ header {
   }
 
   .product {
-    width: 340px;
+    width: 365px;
     margin-bottom: 40px;
 
     figure {
@@ -207,6 +212,10 @@ footer {
   figure img {
     width: 100%;
     height: auto;
+  }
+
+  p {
+    font-size: $hugeSize;
   }
 
   @media screen and (max-width: 950px) {

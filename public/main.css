@@ -4,7 +4,7 @@
 }
 
 body {
-  padding: 60px 40px;
+  padding: 0 40px 60px;
   font-size: 1.2rem;
 }
 
@@ -20,6 +20,10 @@ a:hover {
 header {
   display: flex;
   margin-bottom: 200px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  padding: 20px 0;
 }
 header > * {
   flex: 1;
@@ -33,6 +37,7 @@ header .main-nav {
 header .main-nav li {
   margin: 0 10px;
   display: flex;
+  height: 40px;
 }
 header .main-nav li a {
   display: block;
@@ -53,7 +58,7 @@ header .header-img {
   justify-content: center;
 }
 header .header-img img {
-  width: 200px;
+  width: 400px;
   height: auto;
 }
 header .social-nav {
@@ -125,7 +130,7 @@ header .mobile-nav a {
   }
 }
 .products-container .product {
-  width: 340px;
+  width: 365px;
   margin-bottom: 40px;
 }
 .products-container .product figure {
@@ -184,6 +189,9 @@ footer ul li a {
 .us-container figure img {
   width: 100%;
   height: auto;
+}
+.us-container p {
+  font-size: 1.6rem;
 }
 @media screen and (max-width: 950px) {
   .us-container {

@@ -12,5 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "sass": "^1.32.6"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abril-Arancibia/proyectofinal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Abril-Arancibia/proyectofinal/issues"
+  },
+  "homepage": "https://github.com/Abril-Arancibia/proyectofinal#readme"
 }
