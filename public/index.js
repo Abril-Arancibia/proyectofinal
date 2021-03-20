@@ -1,76 +1,109 @@
-function cargarProductos() {
-    return [{
-        nombre: "Maceta Sol",
-        codigo: 1,
-        precio: 45,
+const productos = [
+    {
+        name: "Maceta personalizada 1",
+        precio: 50.00,
+        imagen: "imagenes/fototienda1.jpeg"
     },
     {
-        nombre: "Maceta Desierto",
-        codigo: 2,
-        precio: 50,
+        name: "Maceta personalizada 2",
+        precio: 50.00,
+        imagen: "imagenes/fototienda2.jpeg"
     },
     {
-        nombre: "Maceta buda",
-        codigo: 3,
-        precio: 55,
-    }];
-}
+        name: "Maceta personalizada 3",
+        precio: 50.00,
+        imagen: "imagenes/fototienda3.jpeg"
+    },
+    {
+        name: "Maceta personalizada 4",
+        precio: 50.00,
+        imagen: "imagenes/fototienda4.jpeg"
+    },
+    {
+        name: "Maceta personalizada 5",
+        precio: 50.00,
+        imagen: "imagenes/fototienda5.jpeg"
+    },
+    {
+        name: "Maceta personalizada 6",
+        precio: 50.00,
+        imagen: "imagenes/fototienda(3).jpeg"
+    },
+    {
+        name: "Maceta personalizada 7",
+        precio: 50.00,
+        imagen: "imagenes/fototienda(4).jpeg"
+    },
+    {
+        name: "Maceta personalizada 8",
+        precio: 50.00,
+        imagen: "imagenes/fototienda(5).jpeg"
+    },
+    {
+        name: "Maceta personalizada 9",
+        precio: 50.00,
+        imagen: "imagenes/fototienda(6).jpeg"
+    },
+    {
+        name: "Maceta personalizada 10",
+        precio: 50.00,
+        imagen: "imagenes/fototienda(7).jpeg"
+    },
+    {
+        name: "Maceta personalizada 11",
+        precio: 50.00,
+        imagen: "imagenes/fototienda(8).jpeg"
+    },
+    {
+        name: "Maceta personalizada 12",
+        precio: 50.00,
+        imagen: "imagenes/fototienda(10).jpeg"
+    },
+    
+    
+]
 
-function obtenerProductoBuscado(productos) {
-    let mensajeProducto = "Ingrese el codigo del producto:\n";
+const carrito = [];
 
-    for (i = 0; i < productos.length; i++) {
-        let nombre = productos[i].nombre;
-        let codigo = productos[i].codigo;
-        mensajeProducto = mensajeProducto + codigo + " - " + nombre + "\n";
+const productsContainer = document.getElementById("products-container");
+
+productos.forEach(function(producto) {
+    const productoDiv = document.createElement('div');
+    productoDiv.className = "product"
+
+    const figureContainer = document.createElement('figure');
+    const imagenContainer = document.createElement('img');
+    imagenContainer.src = producto.imagen;
+
+    const productoNombre = document.createElement('div');
+    productoNombre.className = "name"
+
+    const productoPrecio = document.createElement('div');
+    productoPrecio.className = "price"
+
+    
+    const botonContainer = document.createElement('div');
+    botonContainer.className = "btn-buy"
+    const productoBoton = document.createElement('button');
+    productoBoton.classList.add("btn");
+    productoBoton.classList.add("btn-outline-dark");
+
+    productoNombre.innerHTML = producto.name;
+    productoPrecio.innerHTML = "$ " + producto.precio;
+    productoBoton.innerText = "Agregar al carrito";
+
+    productoBoton.onclick = function() {
+        carrito.push(producto);
+        alert(producto.name + " Ha sido agregado al carrito");
     }
 
-    let codigoProducto = prompt(mensajeProducto);
+    productsContainer.appendChild(productoDiv);
+    productoDiv.appendChild(figureContainer);
+    productoDiv.appendChild(productoNombre);
+    productoDiv.appendChild(productoPrecio);
+    productoDiv.appendChild(botonContainer);
+    botonContainer.appendChild(productoBoton);
+    figureContainer.appendChild(imagenContainer);
 
-    return productos.find((producto) => producto.codigo == codigoProducto);
-}
-
-function obtenerFinanciacionPretendida(precio) {
-    return prompt("El precio del producto es: $" + precio + "\nEn cuantas cuotas desea pagarlo? (Hasta 12 cuotas)");
-}
-
-function calcularCostos(precio, cuotas) {
-    let interes = 0;
-    if (cuotas > 3 && cuotas <= 6) {
-        interes = 0.2;
-    } else if (cuotas > 6) {
-        interes = 0.3;
-    }
-
-    let precioFinal = precio * (interes + 1);
-    let precioCuota = precioFinal / cuotas;
-
-    return {
-        precioFinal: precioFinal,
-        precioCuota: precioCuota
-    };
-}
-
-function mostrarCostoAlCliente(precioFinal, cuotas, precioCuota) {
-    alert("El precio final es de: $" + precioFinal + " y lo va a pagar en " + cuotas + " de $" + precioCuota.toFixed(2));
-}
-
-function main() {
-    let productos = cargarProductos();
-    const productoSelecionado = obtenerProductoBuscado(productos);
-
-    if (!productoSelecionado) {
-        alert("El codigo del producto es incorrecto")
-    } else {
-
-        let cuotas = obtenerFinanciacionPretendida(productoSelecionado.precio);
-
-        let costos = calcularCostos(productoSelecionado.precio, cuotas);
-
-        mostrarCostoAlCliente(costos.precioFinal, cuotas, costos.precioCuota);
-    }
-}
-
-
-document.body.onload = main;
+});
 
