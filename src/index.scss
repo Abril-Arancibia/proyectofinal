@@ -165,6 +165,19 @@ header {
   }
 }
 
+.shopping-cart-products {
+  padding: 20px 0px;
+}
+
+.shopping-cart-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.shopping-cart-image {
+  max-width: 80px;
+  border-radius: 20px;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
