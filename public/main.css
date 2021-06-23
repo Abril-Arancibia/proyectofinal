@@ -145,19 +145,6 @@ header .mobile-nav a {
   justify-content: center;
 }
 
-.shopping-cart-products {
-  padding: 20px 0px;
-}
-
-.shopping-cart-header {
-  border-bottom: 1px solid #ccc;
-}
-
-.shopping-cart-image {
-  max-width: 80px;
-  border-radius: 20px;
-}
-
 footer {
   display: flex;
   justify-content: space-between;
@@ -219,19 +206,19 @@ footer ul li a {
   }
 }
 
-.contacto-container {
+.contact-container {
   display: flex;
   justify-content: space-evenly;
 }
-.contacto-container > * {
+.contact-container > * {
   flex: 1;
   margin: 0 30px;
 }
-.contacto-container iframe {
+.contact-container iframe {
   width: 100%;
 }
 @media screen and (max-width: 950px) {
-  .contacto-container {
+  .contact-container {
     display: block;
   }
 }
