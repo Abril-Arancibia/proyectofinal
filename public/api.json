@@ -1,0 +1,76 @@
+{
+    "products": [
+        { 
+            "id": 1, 
+            "name": "Maceta personalizada 1", 
+            "price": 999, 
+            "image": "imagenes/fototienda1.jpeg"
+        },
+        {
+             "id": 2, 
+             "name": "Maceta personalizada 2", 
+             "price": 999, 
+             "image": "imagenes/fototienda2.jpeg" 
+        },
+        { 
+            "id": 3, 
+            "name": "Maceta personalizada 3", 
+            "price": 999, 
+            "image": "imagenes/fototienda3.jpeg" 
+        },
+        { 
+            "id": 4, 
+            "name": "Maceta personalizada 4", 
+            "price": 999, 
+            "image": "imagenes/fototienda4.jpeg" 
+        },
+        { 
+            "id": 5, 
+            "name": "Maceta personalizada 5", 
+            "price": 999, 
+            "image": "imagenes/fototienda5.jpeg" 
+        },
+        { 
+            "id": 6, 
+            "name": "Maceta personalizada 6", 
+            "price": 999, 
+            "image": "imagenes/fototienda(3).jpeg" 
+        },
+        { 
+            "id": 7, 
+            "name": "Maceta personalizada 7", 
+            "price": 999, 
+            "image": "imagenes/fototienda(4).jpeg" 
+        },
+        { 
+            "id": 8, 
+            "name": "Maceta personalizada 8", 
+            "price": 999, 
+            "image": "imagenes/fototienda(5).jpeg" 
+        },
+        { 
+            "id": 9, 
+            "name": "Maceta personalizada 9", 
+            "price": 999, 
+            "image": "imagenes/fototienda(6).jpeg" 
+        },
+        { 
+            "id": 10, 
+            "name": "Maceta personalizada 10",
+            "price": 999, 
+            "image": "imagenes/fototienda(7).jpeg" 
+        },
+        { 
+            "id": 11,
+            "name": "Maceta personalizada 11",
+            "price": 999, 
+            "image": "imagenes/fototienda(8).jpeg" 
+        },
+        { 
+            "id": 12, 
+            "name": "Maceta personalizada 12",
+            "price": 999, 
+            "image": "imagenes/fototienda(10).jpeg" 
+        }
+    ]
+}
